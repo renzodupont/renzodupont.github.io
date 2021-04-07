@@ -2,12 +2,71 @@
 
 	<head>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+        <style>
+            .container {
+                margin-top:10px;
+            }
+            .panel-heading {
+                font-size: 24px;
+            }
+            body {
+                background: #112A31;
+				color:white;
+            }
+			h1 {
+				font-family: 'Indie Flower', cursive;
+				font-size: 65px;
+			}
+			.alert-info {
+				background: transparent;
+				color:white;
+			}
+        </style>
+
+		<script>
+		
+			$(document).ready(function() {
+				$('.container').show(1500);
+			});
+
+		</script>
+
 	</head>
 
 
 	<body>
 
-		Hello world!
+		<div class="container" style="display: none;">
+			<div class="row">
+				<div class="col" style="text-align: center;margin-bottom: 10px;">
+					<h1>Renzo Dupont</h1>
+				</div>
+				<div class="col">
+					<img src="img/profile.jpg" width="100%" style="max-width: 800px; margin:0 auto;display: block;border-radius: 5px;" />
+				</div>
+				<div class="col" style="text-align: center;margin-top: 15px;">
+					<div class="alert alert-info" role="alert">
+						My briefly explination of how to configure Github Pages: <a href="https://renzodupont.github.io/lab/githubpages.html" target="_blank">https://renzodupont.github.io/lab/githubpages.html</a>
+					</div>
+				</div>
+				<div class="col" style="text-align: center;margin-top: 15px;">
+					<div class="alert alert-info" role="alert">
+						You can reach me via <a href="https://instagram.com/renzodupont" target="_blank">instagram</a> or <a href="https://twitter.com/renzodupont.com" target="_blank">twitter</a>.
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 	</body>
 
