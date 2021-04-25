@@ -67,7 +67,7 @@
         function rotateImage(moveToDegrees) {
             if (pacManPosition.degrees !== moveToDegrees) {
                 let img = document.getElementById("PacMan");
-                $(img).css('transform', 'rotate(' + moveToDegrees + 'deg)');
+                img.style.transform = 'rotate(' + moveToDegrees + 'deg)';
                 pacManPosition.degrees = moveToDegrees;
             }
         }

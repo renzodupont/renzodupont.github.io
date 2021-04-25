@@ -6,9 +6,10 @@ Pac Man Lab Week 4
 
 # Description
 
-This project is supposed to be challenging and useful for people learning javascript.
+This project is supposed to be challenging and useful for people learning javascript.<br/><br/>
+
 As we are currently in Week 4 of our Full Stack Development Professional Certificate,
-we were proposed to simulate the Pac Mac game character movement in the screen.
+we were proposed to simulate the Pac Mac game character movement in the screen.<br/><br/>
 
 It was build using plain javascript, and only used jQuery for animating the movement to make it a little smoother.
 
