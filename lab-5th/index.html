@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Full Stack Development Week 5</title>
+  </head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="./boston.js"></script>
+  <script src="./posts.js"></script>
+
+  <style>
+    body {
+      background: darkgray;
+    }
+    #topSalaries {
+      padding:10px;
+      margin-bottom:1px solid gray;
+    }
+    #container {
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+      padding: 0 60px;
+      background: white;
+    }
+    #footer {
+      background: white;
+      padding: 10px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    #top {
+      background: white;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+<body>
+
+  <div id="top">
+    <div class="alert alert-light" role="alert">
+      In this exercise, the <b>MIT faculty</b> challenged us to find the people with top 5 salaries, and also identify any
+      person with salary above 200k.<br/>
+      <b>You can find the source of data at the bottom. Over 20k records.</b>
+    </div>
+  </div>
+
+  <div id="container">
+    <!-- populated by JS-->
+  </div>
+
+  <div id="footer">
+    <div class="alert alert-light" role="alert">
+      Source of data: <a href="./bostonEmployeeSalaries.json" target="_blank">Click Here</a>
+    </div>
+  </div>
+
+</body>
+</html>
