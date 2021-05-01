@@ -50,6 +50,12 @@ function renderPosts(boston, container) {
 
     const nameElement = document.createElement('p');
     nameElement.textContent = `Name: ${name}`;
+
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    });
+    salary = formatter.format(salary);
     
     const salaryElement = document.createElement('p');
     salaryElement.textContent = `Salary: ${salary}`;
