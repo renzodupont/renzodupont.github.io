@@ -1,3 +1,10 @@
+// Currency formatter
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+});
+
+// Main function in charge of searching and rendering
 function renderPosts(boston, container) {
     const people = boston.data;
     const topSalaries = createElementWithId('topSalaries', container);
@@ -51,14 +58,8 @@ function renderPosts(boston, container) {
     const nameElement = document.createElement('p');
     nameElement.textContent = `Name: ${name}`;
 
-    var formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    });
-    salary = formatter.format(salary);
-    
     const salaryElement = document.createElement('p');
-    salaryElement.textContent = `Salary: ${salary}`;
+    salaryElement.textContent = `Salary: ${formatter.format(salary)}`;
     
     card.appendChild(nameElement);
     card.appendChild(salaryElement);
