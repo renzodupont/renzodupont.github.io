@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Lab Week 4 - Pac Man</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        let pacManPosition = { 
+            positionX : 10,
+            positionY : 10,
+            degrees : 0
+         };
+         let availableDirections = {
+             left : 'left',
+             right : 'right',
+             up : 'up',
+             down : 'down'
+         }
+
+        const pacArray = ['PacMan1.png', 'PacMan2.png'];
+        let moveBy = 15;
+        let imageArrayIndex = 0; // If mouth is opened or closed - 0 is closed, 1 is opened
+
+        // Function to move the Pac Man image to a new position base on the direction provided
+        function move(direction) {
+            let img = document.getElementById("PacMan");
+            let positionX = pacManPosition.positionX;
+            let positionY = pacManPosition.positionY;
+
+            //Calculates the new position based on the movement direction
+            if (direction === 'right')
+                positionX += moveBy;
+            else if (direction === 'left')
+                positionX -= moveBy;
+            else if (direction === 'up')
+                positionY -= moveBy;
+            else   
+                positionY += moveBy;
+            
+            if (canMoveThere(positionX, positionY, img.width)) {
+
+                pacManPosition.positionX = positionX;
+                pacManPosition.positionY = positionY;
+
+                imageArrayIndex = (imageArrayIndex + 1) % 2; // 1 % 2 = 1, 0 % 2 = 0
+                img.src = pacArray[imageArrayIndex];
+                $(img).animate( { left : pacManPosition.positionX, top : pacManPosition.positionY }, 10 );
+
+            }
+
+        }
+
+        // Checks if the position we want to move the Pac Mac is inside the bounderies
+        function canMoveThere(positionX, positionY, imgWidth) {
+            
+            return !(positionX < 0 || positionY < 0 || 
+                    positionY + imgWidth > window.innerHeight || 
+                    positionX + imgWidth > window.innerWidth);
+
+        }
+
+        // Rotates the image on new keydown events
+        function rotateImage(moveToDegrees) {
+            if (pacManPosition.degrees !== moveToDegrees) {
+                let img = document.getElementById("PacMan");
+                img.style.transform = 'rotate(' + moveToDegrees + 'deg)';
+                pacManPosition.degrees = moveToDegrees;
+            }
+        }
+
+        // This function catches the key code and moves the image accordingly
+        function movePacMan(e) {
+
+            switch (e.keyCode) {
+                case 37:
+                    move(availableDirections.left);
+                    rotateImage( 180 ); 
+                    break;
+                case 38:
+                    move(availableDirections.up);
+                    rotateImage( 270 );
+                    break;
+                case 39:
+                    move(availableDirections.right);
+                    rotateImage( 0 );
+                    break;
+                case 40: 
+                    move(availableDirections.down);
+                    rotateImage( 90 );
+                    break;
+                default: 
+                    break;
+            };
+
+        }
+
+        // Keydown event initialize
+        window.onload = function() {
+            window.addEventListener('keydown', (event) => {
+                movePacMan(event);
+            });
+        };
+
+    </script>
+
+<body>
+    <img id="PacMan" src="PacMan1.png" width='100' style="position:absolute;top:10;left:10;"> </img>
+</body>
+
+</html>

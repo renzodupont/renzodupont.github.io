@@ -1,0 +1,181 @@
+<html>
+
+	<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+        <style>
+            .container {
+                margin-top:10px;
+            }
+            .panel-heading {
+                font-size: 24px;
+            }
+            body {
+                background: #white;
+				color:#112A31;
+            }
+			h1 {
+				font-family: 'Courgette', cursive;
+				font-size: 65px;
+			}
+        </style>
+
+        <script type="text/javascript">
+        
+            $(document).ready(function() {
+
+                $('.firstRow').append( createCircle( -1, "0", "150px", "#a70432", "transparent" ) );
+                $('.firstRow').append( createCircle( 0, "50px", "100px", "#d5df40", "transparent" ) );
+                $('.firstRow').append( createCircle( -1, "100px", "50px", "#faae25", "transparent" ) );
+                $('.firstRow').append( createCircle( 0, "150px", "100px", "#c7e9ef", "transparent" ) );
+                $('.firstRow').append( createCircle( -1, "200px", "150px", "#a70432", "transparent" ) );
+
+                $('.firstRow').append( createCircle( -2, "150px", "200px", "#7e8084", "transparent" ) );
+                $('.firstRow').append( createCircle( -3, "100px", "250px", "#c7e9ef", "transparent" ) );
+                $('.firstRow').append( createCircle( 0, "50px", "200px", "#faae25", "transparent" ) );
+
+                $('.secondRow').append( createCircle( 0, "50px", "200px", "transparent", "#a70432" ) );
+
+                $('.secondRow').append( createCircle( 0, "26px", "238px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "31px", "214px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "44px", "194px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "65px", "182px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "88px", "176px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "112px", "182px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "133px", "195px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "144px", "215px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "149px", "238px", "transparent", "#a70432", "24px", "24px" ) );
+
+                $('.secondRow').append( createCircle( 0, "31px", "262px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "44px", "282px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "65px", "294px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "88px", "300px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "112px", "294px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "133px", "282px", "transparent", "#a70432", "24px", "24px" ) );
+                $('.secondRow').append( createCircle( 0, "144px", "262px", "transparent", "#a70432", "24px", "24px" ) );
+
+                $('.thirdRow').append( createCircle( 0, "0", "190px", "transparent", "#a70432", "80px", "80px" ) );
+                $('.thirdRow').append( createCircle( 0, "12px", "162px", "transparent", "#a70432", "80px", "80px" ) );
+                $('.thirdRow').append( createCircle( 0, "40px", "150px", "transparent", "#a70432", "80px", "80px" ) );
+                $('.thirdRow').append( createCircle( 0, "73px", "162px", "transparent", "#a70432", "80px", "80px" ) );
+                $('.thirdRow').append( createCircle( 0, "80px", "190px", "transparent", "#a70432", "80px", "80px" ) );
+
+                $('.thirdRow').append( createCircle( 0, "12px", "218px", "transparent", "#a70432", "80px", "80px" ) );
+                $('.thirdRow').append( createCircle( 0, "40px", "230px", "transparent", "#a70432", "80px", "80px" ) );
+                $('.thirdRow').append( createCircle( 0, "73px", "218px", "transparent", "#a70432", "80px", "80px" ) );
+                
+                let top = 0;
+                let left = 190;
+                let move = 0;
+                let topRate = 4;
+                $('.fourthRow').append( createCircle( 0, "2px", left + "px", "transparent", "#a70432", "50px", "50px" ) );
+                for(let i = 14; i > 0; i--) {
+                    move = i * -1;
+                    top += topRate;
+                    left += move;
+                    topRate += 0.5;
+                    $('.fourthRow').append( createCircle( 0, top + "px", left + "px", "transparent", "#a70432", "50px", "50px" ) );
+                }
+                for(let i = 0; i < 15; i++) {
+                    move = i * 1;
+                    top += topRate;
+                    left += move;
+                    topRate -= 0.5;
+                    if(i == 14)
+                        top -= 2; ///// WE CORRECT THE LAST CIRCLE
+                    $('.fourthRow').append( createCircle( 0, top + "px", left + "px", "transparent", "#a70432", "50px", "50px" ) );
+                }
+
+                top = 0;
+                topRate = 4;
+                for(let i = 14; i > 0; i--) {
+                    move = i * 1;
+                    top += topRate;
+                    left += move;
+                    topRate += 0.5;
+                    $('.fourthRow').append( createCircle( 0, top + "px", left + "px", "transparent", "#a70432", "50px", "50px" ) );
+                }
+                for(let i = 0; i < 15; i++) {
+                    move = i * -1;
+                    top += topRate;
+                    left += move;
+                    topRate -= 0.5;
+                    if(i == 14)
+                        top -= 2; ///// WE CORRECT THE LAST CIRCLE
+                    $('.fourthRow').append( createCircle( 0, top + "px", left + "px", "transparent", "#a70432", "50px", "50px" ) );
+                }
+
+                $('.fourthRow').append( createCircle( 0, "2px", "84px", "transparent", "#a70432", "260px", "260px", "4px" ) );
+                $('.fourthRow').append( createCircle( 0, "52px", "135px", "transparent", "#a70432", "160px", "160px", "4px" ) );
+                
+
+            });
+        
+            function createCircle(zIndex, top, left, backColor, borderColor, width = "100px", height = "100px", borderWidth = "1px") {
+
+                let div = $('<div/>');
+                div.css({
+                    zIndex: zIndex,
+                    position: "absolute",
+                    width: width,
+                    height: height,
+                    borderWidth: borderWidth,
+                    borderColor: borderColor,
+                    borderStyle: "solid",
+                    background: backColor,
+                    top: top,
+                    left: left,
+                    borderRadius: "50%"
+                });
+                return div;
+
+            }
+        
+        </script>
+
+	</head>
+
+
+	<body>
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col" style="text-align: center;margin-bottom: 20px;">
+					<h1>Shapes</h1>
+				</div>
+
+				<div class="col firstRow" style="position: relative;width: 400px;height:300px;margin:0 auto;">
+					
+				</div>
+
+                <div class="col secondRow" style="position: relative;width: 400px;height:200px;margin:0 auto;">
+					
+				</div>
+
+                <div class="col thirdRow" style="position: relative;width: 400px;height:200px;margin:0 auto;">
+					
+				</div>
+
+                <div class="col fourthRow" style="position: relative;width: 400px;height:200px;margin:0 auto;">
+					
+				</div>
+
+            </div>
+
+		</div>
+
+
+	</body>
+
+
+</html>

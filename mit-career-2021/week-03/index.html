@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd Week Table Exercise Lab</title>
+
+    <script type="text/javascript">
+
+        const table = [];
+        let currentMultiplier = 0;
+
+        for (let row = 0; row < 10; row++) {
+
+            currentMultiplier++; // First we increment to 1, then 2 and so on
+            table[row] = [];
+            
+            for(let column = 1; column <= 10; column++) {
+                table[row].push( (column * currentMultiplier).toString().padStart(2) ); 
+                // padStart will fill in with empty spaces to format the columns if the number is less than 2
+                // Example: padStart of 1 will be " 1", of "20" it will remain the same, etc
+            }
+
+        }
+
+        let fullTable = '';
+        for(let line = 0; line < 10; line++) {
+            fullTable += table[line].join(' ') + '\n'; // Join each item separated by a space and at the end of the line inserts a break
+        }
+
+        console.log( fullTable );
+
+    </script>
+
+</head>
+<body>
+    
+    <h1> Table Exercise </h1>
+    <p>Check the console :)</p>
+
+
+</body>
+</html>
