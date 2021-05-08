@@ -1,8 +1,8 @@
-### MIT Lab Week 4
+### MIT Lab Week 6
 
 # Name
 
-Top Salaries from JSON Source Lab Week 5
+Top Salaries from JSON Source Lab Week 6
 
 # Description
 
