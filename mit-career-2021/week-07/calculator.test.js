@@ -4,7 +4,7 @@
 // NOTE:
 // I used the operations as expected results instead of fixed values 
 // as a way to visualize more clear the expected result in each case. 
-// Of course this would not be the best on more complex functions.
+// Of course this would not be recommended on more complex functions.
 //
 //////////////
 
