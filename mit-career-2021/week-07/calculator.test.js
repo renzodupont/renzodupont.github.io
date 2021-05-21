@@ -8,12 +8,12 @@ describe('Calculator Test', () => {
 
     // Test 1: add function
     it('Test add function', () => {
-        // Pass tests
+        // Correct values assert
         expect( add(1, 2, 3) ).toBe( 1 + 2 + 3 );
         expect( add(5, 5, 5, 5) ).toBe( 5 + 5 + 5 + 5 );
         expect( add(1, 1) ).toBe( 1 + 1 );
 
-        //Fail tests
+        // Incorrect values assert
         expect( add(2, 2, 3) ).not.toBe( 2 * 2 * 3 );
         expect( add(2, 2, 3) ).not.toBe( 2 - 2 - 3 );
         expect( add(2, 2, 3) ).not.toBe( 2 / 2 / 3 );
@@ -21,12 +21,12 @@ describe('Calculator Test', () => {
 
     // Test 2: multiply function
     it('Test multiply function', () => {
-        // Pass tests
+        // Correct values assert
         expect( multiply(1, 2, 3) ).toBe( 1 * 2 * 3 );
         expect( multiply(5, 5, 5, 5) ).toBe( 5 * 5 * 5 * 5 );
         expect( multiply(1, 1) ).toBe( 1 );
 
-        //Fail tests
+        // Incorrect values assert
         expect( multiply(2, 2, 3) ).not.toBe( 2 + 2 + 3 );
         expect( multiply(2, 2, 3) ).not.toBe( 2 - 2 - 3 );
         expect( multiply(2, 2, 3) ).not.toBe( 2 / 2 / 3 );
@@ -34,12 +34,12 @@ describe('Calculator Test', () => {
 
     // Test 3: substract function
     it('Test substract function', () => {
-        // Pass tests
+        // Correct values assert
         expect( substract(1, 2, 3) ).toBe( 1 - 2 - 3 );
         expect( substract(5, 5, 5, 5) ).toBe( 5 - 5 - 5 - 5 );
         expect( substract(1, 1) ).toBe( 0 );
 
-        //Fail tests
+        // Incorrect values assert
         expect( substract(2, 2, 3) ).not.toBe( 2 + 2 + 3 );
         expect( substract(2, 2, 3) ).not.toBe( 2 * 2 * 3 );
         expect( substract(2, 2, 3) ).not.toBe( 2 / 2 / 3 );
@@ -47,12 +47,12 @@ describe('Calculator Test', () => {
 
     // Test 4: divide function
     it('Test divide function', () => {
-        // Pass tests
+        // Correct values assert
         expect( divide(1, 2, 3) ).toBe( 1 / 2 / 3 );
         expect( divide(5, 5, 5, 5) ).toBe( 5 / 5 / 5 / 5 );
         expect( divide(1, 1) ).toBe( 1 );
 
-        //Fail tests
+        // Incorrect values assert
         expect( divide(2, 2, 3) ).not.toBe( 2 + 2 + 3 );
         expect( divide(2, 2, 3) ).not.toBe( 2 * 2 * 3 );
         expect( divide(2, 2, 3) ).not.toBe( 2 - 2 - 3 );
