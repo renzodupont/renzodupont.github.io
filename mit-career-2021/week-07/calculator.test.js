@@ -1,5 +1,11 @@
 ///////////////
 // This is a test file for calculator.js which tests the output of each operation
+//
+// NOTE:
+// I used the operations as expected results instead of fixed values 
+// as a way to visualize more clear the expected result in each case. 
+// Of course this would not be the best on more complex functions.
+//
 //////////////
 
 import { add, substract, divide, multiply } from './calculator';
