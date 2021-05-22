@@ -35,9 +35,9 @@ describe('Greet Test', () => {
         expect( greet('RENZO', 'BENJAMIN') ).toBe( 'HELLO RENZO, BENJAMIN!' );
 
         // Incorrect values assert
-        expect( greet('Renzo', 'Benjamin') ).not.toBe( 'Hello, Renzo, Benjamin!' );
+        expect( greet('RENzo', 'Benjamin') ).not.toBe( 'Hello, Renzo, Benjamin!' );
         expect( greet('RENZO', 'Benjamin') ).not.toBe( 'HELLO RENZO, Benjamin!' );
-        expect( greet('RENZO', 'BENJAMIN') ).not.toBe( 'Hello, RENZO, BENJAMIN!' );
+        expect( greet('RENZO', 'BENJAMIN', 'BAUTISTA') ).not.toBe( 'Hello, RENZO, BENJAMIN, BAUTISTA!' );
     });
 
 });
