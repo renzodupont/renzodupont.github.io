@@ -117,5 +117,21 @@ body {
   width: 600px;
   height: 5px;
   background-color: #988073;
-  
+}
+.cloud-container {
+  position: absolute;
+  z-index: -500;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+}
+.cloud {
+  position: relative;
+  height: 268px;
+  width: 250px;
+  background: url('./cloud.png');
+  background-size: cover;
+  opacity: 0;
 }

@@ -14,6 +14,25 @@ document.onmousemove = (event) => {
   }
 };
 
+/* My code */
+let currentCloudIndex = 0; // For the clouds, I will use the grid-column-template approach with CSS
+let previousCloud = null;
+window.onload = () => {
+  const container = document.getElementsByClassName('cloud-container')[0];
+
+  for (let i = 0; i < 6; i++) {
+    const cloud = document.createElement('div');
+    cloud.classList.add('cloud' + i);
+    cloud.classList.add('cloud');
+    container.appendChild(cloud);
+  }
+
+  setInterval(closeEyes, 6000);
+  setInterval(changeCloud, 4000);
+
+  changeCloud();
+};
+
 const moveEyes = (ball, x, y) => {
   $(ball).animate({
     left: x,
@@ -34,4 +53,13 @@ const closeEyes = () => {
   });
 }
 
-setInterval(closeEyes, 6000);
+const changeCloud = () => {
+  const currentCloud = document.getElementsByClassName('cloud' + currentCloudIndex)[0];
+  $(currentCloud).animate({ opacity: 1 }, 800);
+
+  if(previousCloud !== null)
+    $(previousCloud).animate({ opacity: 0 }, 800);
+
+  previousCloud = currentCloud;
+  currentCloudIndex = currentCloudIndex === 5 ? 0 : currentCloudIndex + 1;
+}
