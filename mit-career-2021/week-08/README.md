@@ -16,7 +16,7 @@ Also, we are using callback functions and async functions to bring some action t
 It was build using plain javascript. JQuery was used only for basic animations.
 
 <br/><br/>
-Exercise: https://renzodupont.github.io/mit-career-2021/week-08/index.html
+Exercise: https://renzodupont.github.io/mit-career-2021/week-08/
 
 # Contact info
 
