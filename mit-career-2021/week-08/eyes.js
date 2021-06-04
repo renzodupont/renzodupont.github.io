@@ -39,7 +39,7 @@ const moveEyes = (ball, x, y) => {
     top: y,
     transform: 'translate(-' + x + ',-' + y + ')'
   }, 20);
-}
+} 
 
 const closeEyes = () => {
   $('.eye').animate({
