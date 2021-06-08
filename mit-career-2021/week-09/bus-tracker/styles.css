@@ -1,0 +1,34 @@
+body, p{
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.map-overlay {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+}
+
+.alert {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  opacity: 0.9;
+}
+
+.bus-selector {
+  width: 200px;
+  display: inline-block;
+}
