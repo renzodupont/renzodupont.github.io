@@ -5,7 +5,7 @@ let counter = 0;
 let mainMarker = null;
 let currentPath = null;
 
-const move = (timestamp) => {
+const move = () => {
 
   if(map === null || mainMarker === null || 
     currentPath === null || counter >= currentPath.length) return;
