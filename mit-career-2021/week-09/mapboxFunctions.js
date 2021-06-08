@@ -4,9 +4,23 @@ let map = null;
 let mapStyle = 'mapbox://styles/mapbox/navigation-day-v1'; // Default style
 let center = [-58.357578,-33.164445]; // Default center
 
-const allPaths = ['exercise', 'toThePark', 'toTheBeach'];
-const geoJsonData = { };
+const pathName = 'line';
+const geoJsonData = { 
+  'type': 'FeatureCollection',
+  'features': [
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'LineString',
+        'coordinates': [ center ] // Initial marker placement
+      }
+    }
+  ]
+};
 
+
+/*************************** FUNCTIONS ***************************/
+// Adds a marker to the map and returns it to be used outside the function
 const addMarker = (lngLat, iconUrl) => {
 
   var el = document.createElement('div');
@@ -22,6 +36,7 @@ const addMarker = (lngLat, iconUrl) => {
 
 }
 
+// Creates the main map and makes it available globally
 const createMap = (container) => {
 
   map = new mapboxgl.Map({
@@ -32,36 +47,23 @@ const createMap = (container) => {
   });
 
   map.on('load', () => {
-    allPaths.forEach(item => createPath(item));
+    createPath(pathName);
   });
 
 };
 
-const createPath = (pathId) => {
-
-  geoJsonData[pathId] = { 
-      'type': 'FeatureCollection',
-      'features': [
-        {
-          'type': 'Feature',
-          'geometry': {
-            'type': 'LineString',
-            'coordinates': [ center ]
-          }
-        }
-      ]
-    };
-
-  map.addSource(pathId, 
+// Creates a path to be able to show a line using the provided coordinates
+const createPath = () => {
+  map.addSource(pathName, 
     {
       'type': 'geojson',
-      'data': geoJsonData[pathId]
-    });
-  
+      'data': geoJsonData
+    }
+  );
   map.addLayer({
-    'id': pathId,
+    'id': pathName,
     'type': 'line',
-    'source': pathId,
+    'source': pathName,
     'layout': { 
       'visibility' : 'visible', 
       'line-cap': 'round',
@@ -73,21 +75,17 @@ const createPath = (pathId) => {
       'line-opacity': 0.8
     }
   });
-
 }
 
-const clearAllPaths = () => {
-
-  allPaths.forEach(pathId => {
-    geoJsonData[pathId].features[0].geometry.coordinates = [ center ];
-    map.getSource(pathId).setData(geoJsonData[pathId]);
-  });
-
+// Clear any visible marker from the map
+const clearPath = () => {
+  geoJsonData.features[0].geometry.coordinates = [ center ];
+  map.getSource(pathName).setData(geoJsonData);
 };
 
-const showPath = (pathId, lngLat) => {
-
-  geoJsonData[pathId].features[0].geometry.coordinates.push(lngLat);
-  map.getSource(pathId).setData(geoJsonData[pathId]);
-
+// Moves marker and shows the path from the first point to the current place of the marker
+const moveMarkerTo = (marker, lngLat) => {
+  marker.setLngLat(lngLat);
+  geoJsonData.features[0].geometry.coordinates.push(lngLat);
+  map.getSource(pathName).setData(geoJsonData);
 };

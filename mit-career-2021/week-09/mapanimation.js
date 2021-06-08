@@ -4,7 +4,6 @@ let myHouse = [-58.357578,-33.164445];
 let counter = 0;
 let mainMarker = null;
 let currentPath = null;
-let currentPathId = null;
 
 const move = (timestamp) => {
 
@@ -13,8 +12,7 @@ const move = (timestamp) => {
 
   setTimeout(() => {
 
-    mainMarker.setLngLat(currentPath[counter]);
-    showPath(currentPathId, currentPath[counter]);
+    moveMarkerTo(mainMarker, currentPath[counter]);
     counter++;
 
     move();
@@ -25,20 +23,19 @@ const move = (timestamp) => {
 
 /*************************** CALLBACK / EVENT FUNCTIONS ***************************/
 const showExercisePath = () => {
-  showSelectedPath('exercise', exercisePath);
+  showSelectedPath(exercisePath);
 };
 const showToTheParkPath = () => {
-  showSelectedPath('toThePark', toTheParkPath);
+  showSelectedPath(toTheParkPath);
 };
 const showToTheBeachPath = () => {
-  showSelectedPath('toTheBeach', toTheBeach);
+  showSelectedPath(toTheBeach);
 };
 
-const showSelectedPath = (pathId, path) => {
+const showSelectedPath = (path) => {
   counter = 0;
   currentPath = path;
-  currentPathId = pathId;
-  clearAllPaths();
+  clearPath();
   move();
 };
 
