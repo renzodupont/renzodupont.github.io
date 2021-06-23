@@ -14,7 +14,7 @@ The page let's you move the iconic "Pac-Man" character on the screen and contain
 
 It was build using plain javascript, and only used jQuery for animating the movement to make it a little smoother.
 
-Exercise: https://renzodupont.github.io/mit-career-2021/week-04/index.html
+Live Preview: https://renzodupont.github.io/mit-career-2021/week-04/index.html
 
 # Contact info
 
