@@ -16,6 +16,17 @@ It was build using plain javascript, and only used jQuery for animating the move
 
 Live Preview: https://renzodupont.github.io/mit-career-2021/week-04/index.html
 
+# How to run
+
+The project doesn't need anything specific to work. Just open the index.html in your browser.
+
+# Future improvements
+
+<ul>
+  <li>Add ghosts and the ability to eat them by the Pac-Man</li>
+  <li>Add a more complex stage and smaller character</li>
+</ul>
+
 # Contact info
 
 📫 https://www.linkedin.com/in/renzo-dupont-b9797941/ | https://twitter.com/renzodupont | https://instagram.com/renzodupont
