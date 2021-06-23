@@ -15,7 +15,7 @@ while learning to manipulate Map layers using Mapbox.
 
 It was developed using plain javascript and Bootstrap as a starting point for styles.
 
-Check out this link to see another exercise using Maps: https://renzodupont.github.io/mit-career-2021/week-09/
+Live Preview: https://renzodupont.github.io/mit-career-2021/week-09/bus-tracker/
 
 # How to Run
 
