@@ -1,22 +1,31 @@
 ### MIT Lab Week 8
 
-# Name
+# Title
 
-Moving eyes in a Minecraft like Homer Lab Week 8
+Moving eyes in a Minecraft like Homer MIT Lab Week 8
 
 # Description
 
-This project is supposed to be challenging and useful for people learning javascript.<br/><br/>
+This project is supposed to be challenging and useful for people learning javascript, created as part of one of our assignments during the Full Stack Development career in 2021.
 
-As we are currently in Week 8 of our Full Stack Development Professional Certificate,
-we were are learning to feel confortable applying CSS styling to build more complex elements.<br/><br/>
+The page generates a Minecraft looking Homer Simpson which follows your mouse movements with its eyes. Homer will also close its eyes every now and then (like we all need to do, right?), and there is a small animation in the sky tribute to a memorable character of the series.
 
-Also, we are using callback functions and async functions to bring some action to our work.<br/><br/>
+<img src="preview.jpg" />
 
 It was build using plain javascript. JQuery was used only for basic animations.
 
-<br/><br/>
-Exercise: https://renzodupont.github.io/mit-career-2021/week-08/
+Live Preview: https://renzodupont.github.io/mit-career-2021/week-08/
+
+# How to run
+
+The project doesn't need anything specific to work. Just open the index.html in your browser.
+
+# Future improvements
+
+<ul>
+  <li>Add more details to Homer, like shadows</li>
+  <li>Animate Homer's mouth as well</li>
+</ul>
 
 # Contact info
 
