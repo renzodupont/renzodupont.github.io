@@ -1,0 +1,153 @@
+body,
+p,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #202124;
+  color: white;
+  font-family: "Trirong", serif;
+}
+
+.background {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  opacity: 0.04;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -5000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  margin-top: 10px;
+  padding: 50px;
+}
+
+.alert-info {
+  background: transparent;
+  color: white;
+}
+
+.navbar-brand {
+  font-family: "Viaoda Libre", cursive;
+  padding-right: 15px;
+  margin-right: 10px;
+  border-right: 1px solid #515151;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: 128px 300px;
+  height: 130px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.introduction .presentation h1 {
+  font-family: "Baskervville", serif;
+  color: #e0b9f0;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.introduction .presentation h5 {
+  color: gray;
+}
+
+.introduction .profile-pic {
+  height: 128px;
+  border-radius: 50%;
+}
+
+/******* LinkedIn Recommendations ******/
+.linkedin-recommendations {
+  margin-top: 40px;
+  border-top: 1px solid #515151;
+  padding-top: 30px;
+}
+
+.linkedin-recommendations .big-title {
+  color: #515151;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.linkedin-recommendation {
+  text-align: left;
+}
+
+.linkedin-recommendation .title {
+  display: grid;
+  grid-template-columns: 128px 300px;
+  height: 130px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.linkedin-recommendation .title img {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.linkedin-recommendation .title .role {
+  font-size: 15px;
+  color: #e0b9f0;
+}
+
+.linkedin-recommendation .title .when {
+  font-size: 14px;
+  color: gray;
+}
+
+.linkedin-recommendation .recommendation p {
+  font-size: 14px;
+}
+
+/******* FOOTER ******/
+.footer {
+  background: #343a40;
+  padding: 15px;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.footer a {
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer a:hover {
+  color: #e0b9f0;
+}
+
+/********************************** RESPONSIVE CSS *******************************/
+@media (max-width: 600px) {
+  .navbar-brand {
+    border-right: 0;
+  }
+  .container {
+    padding: 15px;
+  }
+}

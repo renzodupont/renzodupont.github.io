@@ -1,0 +1,78 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #202124;
+  color: white;
+}
+
+.instructions {
+  position: absolute;
+  z-index: 50;
+  opacity: 0.9;
+  color: white;
+  width: 100%;
+  top: 20px;
+  text-align: center;
+}
+
+.instructions a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.packman {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.border {
+  border: 2px solid blue;
+  box-shadow: 0px 0px 23px 6px rgba(0, 46, 138, 1);
+}
+
+.outer-border {
+  position: absolute;
+  margin: 10px;
+  width: calc(100vw - 30px);
+  height: calc(100vh - 30px);
+}
+
+.inner-border-1 {
+  position: absolute;
+  margin-top: calc(25vh - 25px);
+  margin-left: calc(25vw - 25px);
+  width: 200px;
+  height: 130px;
+  background: #262c3d;
+}
+
+.inner-border-2 {
+  position: absolute;
+  margin-top: calc(25vh - 25px);
+  margin-left: calc(50vw + 50px);
+  width: 200px;
+  height: 130px;
+  background: #262c3d;
+}
+
+.inner-border-3 {
+  position: absolute;
+  margin-top: calc(50vh + 60px);
+  margin-left: calc(25vw - 25px);
+  width: 200px;
+  height: 130px;
+  background: #262c3d;
+}
+
+.inner-border-4 {
+  position: absolute;
+  margin-top: calc(50vh + 60px);
+  margin-left: calc(50vw + 50px);
+  width: 200px;
+  height: 130px;
+  background: #262c3d;
+}
