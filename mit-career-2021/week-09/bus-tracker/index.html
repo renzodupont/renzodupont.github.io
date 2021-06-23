@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Real Time Bus Tracker - MIT Lab Full Stack Development</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
     <!-- BOOTSTRAP: CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
-          rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
-          crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <!-- BOOTSTRAP: JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
-            crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
 
+    <link rel="shortcut icon" type="image/jpg" href="bus.png" />
     <link href="./styles.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="map"></div>
 
     <div id="top-container" class="map-overlay top alert">
-
-        <p id="main-title" class="title"></p>
-        <p>
-          <b>Select which bus you want to show: </b> 
-          <select id="bus-selector" class="bus-selector form-select"></select>
-        </p>
-        <p id="countdown"></p>
-
+      <p id="main-title" class="title"></p>
+      <p>
+        <b>Select which bus you want to show: </b>
+        <select id="bus-selector" class="bus-selector form-select"></select>
+      </p>
+      <p id="countdown"></p>
     </div>
 
     <script src="./mbtaFunctions.js"></script>
     <script src="./mapboxFunctions.js"></script>
     <script src="./mapanimation.js"></script>
-</body>
-
+  </body>
 </html>
