@@ -17,6 +17,14 @@ body {
   font-family: "Trirong", serif;
 }
 
+a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+a:hover {
+  color: #e0b9f0;
+}
+
 .background {
   background-image: url(../img/background.jpg);
   background-size: cover;
@@ -77,14 +85,21 @@ a:hover {
   border-radius: 50%;
 }
 
-/******* LinkedIn Recommendations ******/
-.linkedin-recommendations {
+.profile .video {
+  padding-top: 20px;
+}
+
+/******* LinkedIn Recommendations & Portfolio ******/
+.linkedin-recommendations,
+.portfolio {
   margin-top: 40px;
   border-top: 1px solid #515151;
   padding-top: 30px;
 }
 
-.linkedin-recommendations .big-title {
+.linkedin-recommendations .big-title,
+.portfolio .big-title,
+.portfolio h3 {
   color: #515151;
   margin-bottom: 20px;
   text-align: center;
@@ -119,8 +134,14 @@ a:hover {
   color: gray;
 }
 
-.linkedin-recommendation .recommendation p {
+.linkedin-recommendation .recommendation p,
+.portfolio .project p {
   font-size: 14px;
+}
+
+.portfolio .project img {
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 /******* FOOTER ******/
@@ -135,19 +156,14 @@ a:hover {
 
 .footer a {
   margin-left: 20px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footer a:hover {
-  color: #e0b9f0;
 }
 
 /********************************** RESPONSIVE CSS *******************************/
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .navbar-brand {
     border-right: 0;
   }
   .container {
-    padding: 15px;
+    padding: 10px;
   }
 }

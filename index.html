@@ -75,43 +75,19 @@
               >Twitter</a
             >
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Portfolio
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a
-                class="dropdown-item"
-                href="./mit-career-2021/week-04/index.html"
-                >PacMen Game</a
-              >
-              <a
-                class="dropdown-item"
-                href="./mit-career-2021/week-08/index.html"
-                >Eyes Moving</a
-              >
-              <a
-                class="dropdown-item"
-                href="./mit-career-2021/week-09/bus-tracker/index.html"
-                >Real Time Bus Tracker</a
-              >
-            </div>
+          <li class="nav-item">
+            <a class="nav-link portfolio-link" href="">Projects &amp; Labs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link recommendations-link" href="">Recommendations</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row profile">
+        <div class="col-lg-6">
           <div class="introduction">
             <img src="img/profile.jpg" class="profile-pic" />
             <div class="presentation">
@@ -133,7 +109,104 @@
             actitud and increse morale.
           </p>
         </div>
-        <div class="col-md-6 video"></div>
+        <div class="col-lg-6 video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/LRNB0lkk10c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="row portfolio">
+        <div class="col-md-12 big-title">
+          <h2>Some fun projects</h2>
+          <h3>Some more coming soon...</h3>
+        </div>
+        <div class="col-md-4 project">
+          <a
+            href="https://renzodupont.github.io/mit-career-2021/week-04/"
+            target="_blank"
+          >
+            <img src="./img/preview-pacman.jpg" />
+          </a>
+          <h3>Basic</h3>
+          <p>
+            Do you want to know how to build a basic fun Pac-Man game with
+            little code? Check out this live preview with the basics. You will
+            be able to move your Pac-Man in the screen only within the available
+            area. Check it out live
+            <a
+              href="https://renzodupont.github.io/mit-career-2021/week-04/"
+              target="_blank"
+              >here.</a
+            >
+            If you want to see the code, check my repo
+            <a
+              href="https://github.com/renzodupont/pacmen-mitlab-2021"
+              target="_blank"
+              >here.</a
+            >
+          </p>
+        </div>
+        <div class="col-md-4 project">
+          <a
+            href="https://renzodupont.github.io/mit-career-2021/week-08/"
+            target="_blank"
+          >
+            <img src="./img/preview-eyes.jpg" />
+          </a>
+          <h3>Basic Intermediate</h3>
+          <p>
+            How about a Minecraft like looking character with some reaction to
+            your mouse moving? Check this live preview of eyes moving. Also pay
+            attention after a couple of seconds, eyes will start closing. We all
+            need to close our eyes after some seconds, right? Check it out live
+            <a
+              href="https://renzodupont.github.io/mit-career-2021/week-08/"
+              target="_blank"
+              >here.</a
+            >
+            If you want to see the code, check my repo
+            <a
+              href="https://github.com/renzodupont/eyes-mitlab-2021"
+              target="_blank"
+              >here.</a
+            >
+          </p>
+        </div>
+        <div class="col-md-4 project">
+          <a
+            href="https://renzodupont.github.io/mit-career-2021/week-09/bus-tracker/"
+            target="_blank"
+          >
+            <img src="./img/preview-bus.jpg" />
+          </a>
+          <h3>Intermediate</h3>
+          <p>
+            Check this project if you want to learn more about using Mapbox and
+            external APIs for feeding your page. The page loads a live feed of
+            several buses which pass through MIT and Harvard and draw the path
+            while the page is opened. You can also select a specific bus to
+            follow it. Pretty cool to start with more advanced coding! Check it
+            out live
+            <a
+              href="https://renzodupont.github.io/mit-career-2021/week-09/bus-tracker/"
+              target="_blank"
+              >here.</a
+            >
+            If you want to see the code, check my repo
+            <a
+              href="https://github.com/renzodupont/real-time-bus-tracker-mitlab-2021"
+              target="_blank"
+              >here.</a
+            >
+          </p>
+        </div>
       </div>
 
       <div class="row linkedin-recommendations">
@@ -200,8 +273,8 @@
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <script
