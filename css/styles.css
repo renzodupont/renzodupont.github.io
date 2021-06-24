@@ -119,6 +119,21 @@ a:hover {
   padding-top: 20px;
 }
 
+.technologies {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #515151;
+  padding-top: 30px;
+}
+
+.technologies img {
+  height: 48px;
+  display: inline-block;
+  opacity: 0.7;
+}
+
 /******* LinkedIn Recommendations & Portfolio ******/
 .linkedin-recommendations,
 .portfolio {
@@ -130,7 +145,8 @@ a:hover {
 .linkedin-recommendations .big-title,
 .portfolio .big-title,
 .portfolio h3,
-.portfolio .more-projects {
+.portfolio .more-projects,
+.technologies h4 {
   color: #515151;
   margin-bottom: 20px;
   text-align: center;
