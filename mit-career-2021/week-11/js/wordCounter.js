@@ -66,8 +66,8 @@ const search = () => {
   }); //Cleans status before search
   searchableArray.forEach((item) => {
     if (
-      (item.innerHTML.contains && !item.innerHTML.contains(text)) ||
-      (item.innerHTML.includes && !item.innerHTML.includes(text))
+      (item.innerHTML.contains && !item.innerHTML.contains(text)) || //Olds Browsers
+      (item.innerHTML.includes && !item.innerHTML.includes(text)) // New standard for Firefox and Chrome
     ) {
       item.parentNode.style.display = "none";
     }
