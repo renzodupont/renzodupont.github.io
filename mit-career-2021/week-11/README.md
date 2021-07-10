@@ -15,7 +15,7 @@ It was build using plain javascript.
 It uses Bootstrap as a starting point for styles.
 
 <br/><br/>
-Exercise: https://renzodupont.github.io/mit-career-2021/week-09/
+Exercise: https://renzodupont.github.io/mit-career-2021/week-11/
 
 # Contact info
 
