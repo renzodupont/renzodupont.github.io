@@ -135,8 +135,8 @@ a:hover {
   .board-box h3 {
     font-size: 60px;
     display: block;
-    margin-top: calc(50% - 25px);
-    margin-left: calc(50% - 25px);
+    margin-top: calc(50% - 20px);
+    margin-left: calc(50% - 20px);
   }
 }
 /*# sourceMappingURL=main.0aab6543.chunk.css.map */
